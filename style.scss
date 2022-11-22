@@ -184,6 +184,9 @@ body{
                 margin:0;
                 padding: 0;
                 width: 50%;
+                img{
+                    height: 100%;
+                }
             }
         }
         .footer{
@@ -217,6 +220,10 @@ body{
                 li img{
                     width: 20px;
                     height: 20px;
+                }
+                li .insta{
+                    width: 90%;
+                    height: 90%;
                 }
             }
         }

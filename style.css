@@ -175,6 +175,9 @@ main .containerimages--block {
   padding: 0;
   width: 50%;
 }
+main .containerimages--block img {
+  height: 100%;
+}
 main .footer {
   height: 60vh;
   margin: 0;
@@ -208,4 +211,8 @@ main .footer__logo li {
 main .footer__logo li img {
   width: 20px;
   height: 20px;
+}
+main .footer__logo li .insta {
+  width: 90%;
+  height: 90%;
 }/*# sourceMappingURL=style.css.map */
