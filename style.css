@@ -141,13 +141,71 @@ main .testimonials h2 {
   opacity: 0.6;
   font-family: Fraunces;
   font-weight: 900;
+  margin: 10%;
 }
 main .testimonials p {
   font-family: Barlow;
   font-weight: 600;
+  line-height: 1.6em;
+  margin: 10% auto;
 }
 main .testimonials img {
   border-radius: 50%;
   height: 75px;
   width: 75px;
+  margin-top: 50px;
+}
+main .testimonials h3 {
+  font-family: Fraunces;
+  font-weight: 900;
+  font-size: 1.3em;
+  margin: 0;
+}
+main .testimonials .fonction {
+  color: #A7AAAD;
+  margin-top: 0;
+}
+main .containerimages {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+main .containerimages--block {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+}
+main .footer {
+  height: 60vh;
+  margin: 0;
+  background-color: rgb(144, 212, 198);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main .footer h2 {
+  font-weight: 900;
+  color: rgb(44, 117, 102);
+  font-size: 2.5em;
+}
+main .footer ul {
+  list-style-type: none;
+  display: flex;
+}
+main .footer__menu {
+  justify-content: space-around;
+}
+main .footer__menu li {
+  color: rgb(69, 141, 126);
+  font-weight: 600;
+}
+main .footer__logo {
+  justify-content: center;
+}
+main .footer__logo li {
+  padding-right: 30px;
+}
+main .footer__logo li img {
+  width: 20px;
+  height: 20px;
 }/*# sourceMappingURL=style.css.map */

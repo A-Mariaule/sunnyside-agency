@@ -147,17 +147,77 @@ body{
                 opacity: 0.6;
                 font-family: Fraunces;
                 font-weight: 900;
+                margin: 10%;
             }
 
             p{
                 font-family: Barlow;
                 font-weight: 600;
+                line-height: 1.6em;
+                margin: 10% auto;
             }
 
             img{
                 border-radius: 50%;
                 height: 75px;
                 width: 75px;
+                margin-top: 50px;
+            }
+
+            h3{
+                font-family: Fraunces;
+                font-weight: 900;
+                font-size: 1.3em;
+                margin:0;
+            }
+
+            .fonction{
+                color: #A7AAAD;
+                margin-top: 0;
+            }
+        }
+        .containerimages{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            &--block{
+                margin:0;
+                padding: 0;
+                width: 50%;
+            }
+        }
+        .footer{
+            height: 60vh;
+            margin: 0;
+            background-color: rgba(144, 212, 198, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            h2{
+                font-weight: 900;
+                color:rgba(44, 117, 102, 1);
+                font-size: 2.5em;
+            }
+            ul{
+                list-style-type: none;
+                display: flex;
+            }
+            &__menu{
+                justify-content: space-around;
+                li{
+                    color:rgba(69, 141, 126, 1);
+                    font-weight: 600;
+                }
+            }
+            &__logo{
+                justify-content: center;
+                li{
+                    padding-right: 30px;
+                }
+                li img{
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
     }
