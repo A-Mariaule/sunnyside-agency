@@ -1,6 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
+body{
+    text-align: center;
+    margin: 0 auto;
+
 }
 
 
@@ -8,30 +9,42 @@
 @font-face {
     font-family: Fraunces;
     src: url("Fraunces_9pt_Soft/Fraunces_9pt_Soft-Regular.ttf");
+    font-family:Barlow;
+    src: url("Barlow/Barlow-Regular.ttf")
   }
 
-@media screen and (max-width: 480px){
     
     main{
         text-align: center;
         width: 100%;
+        height: 100%;
         font-size: 18px;
         font-family: Fraunces;
-        display: flex;
-        flex-direction: column;
+        img{
+            width: 100%;
+                height: 312px;
+                top: 32px;
+                left: 24px;
+        }
         .header{
             overflow: hidden;
             background-image: url("assets/photos/image-header.jpg");
             background-size: cover;
             background-position: center;
             height: 100vh;
+            width: 100%;
             display: flex;
             flex-direction: column;
             &__top{
                 padding: 3vh;
+                height: 5%;
                 display: flex;
+                align-items: center;
                 justify-content: space-between;
-                
+                img{
+                    width: 30px;
+                    height: 20px;
+                }
             }
             p{
                 color: white;
@@ -55,16 +68,96 @@
                 width: auto;
             }
         } 
-       .egg{
-            background-image: url("assets/photos/image-transform.jpg");
-            background-size: cover;
-            background-position: center;
-            height: 50vh;
-        }
-        .Transform{
-            h2{
+        .container{
+            display: flex;
+            flex-direction: column;
+            &__img{
+                width: 100%;
+            }
+        
+            &__text{
+            margin: 5vh;
+                h2{
+                    font-family: Fraunces ;
+                    font-weight: bolder;
+                    font-size: 32px;
+                }
 
+                p{
+                    margin: 10vh 0;
+                    opacity: 0.6;
+                    line-height: 1.5em;
+                    font-family: Barlow;
+                    font-weight: 600;
+                }
+
+                a{
+                    color: black;
+                    text-transform: uppercase;
+                    font-family: Fraunces;
+                    font-weight: 900;
+                    text-decoration: none;
+                    a::before{
+                        content:"Test";
+                        position: absolute;
+                        background:rgba(250, 212, 0, 1);
+                    }
+                }
+            }
+        }
+        .containerfruit{
+            display: flex;
+            flex-direction: column;
+            color:rgba(36, 85, 74, 1);
+            font-family: Barlow;
+            font-weight: 600;
+            h2{
+                font-family: Fraunces;
+                font-weight: 900;
+            }                
+            &--cerise{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding:  20% 10%;
+                height: 75vh;
+                background-image: url("assets/photos/image-graphic-design.jpg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &--orange{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding:  20% 10%;
+                height: 75vh;
+                background-image: url("assets/photos/image-photography.jpg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+        .testimonials{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 5% 10%;
+            h2{
+                opacity: 0.6;
+                font-family: Fraunces;
+                font-weight: 900;
+            }
+
+            p{
+                font-family: Barlow;
+                font-weight: 600;
+            }
+
+            img{
+                border-radius: 50%;
+                height: 75px;
+                width: 75px;
             }
         }
     }
-}

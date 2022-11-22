@@ -1,60 +1,153 @@
-* {
-  margin: 0;
-  padding: 0;
+body {
+  text-align: center;
+  margin: 0 auto;
 }
 
 @font-face {
   font-family: Fraunces;
   src: url("Fraunces_9pt_Soft/Fraunces_9pt_Soft-Regular.ttf");
+  font-family: Barlow;
+  src: url("Barlow/Barlow-Regular.ttf");
 }
-@media screen and (max-width: 480px) {
-  main {
-    text-align: center;
-    width: 100%;
-    font-size: 18px;
-    font-family: Fraunces;
-    display: flex;
-    flex-direction: column;
-  }
-  main .header {
-    overflow: hidden;
-    background-image: url("assets/photos/image-header.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  main .header__top {
-    padding: 3vh;
-    display: flex;
-    justify-content: space-between;
-  }
-  main .header p {
-    color: white;
-    font-weight: bolder;
-    font-size: 1.2em;
-  }
-  main .header h1 {
-    margin: 40px 0 0 0;
-    text-align: center;
-    padding: 0;
-    color: white;
-    font-size: 2.5em;
-    text-transform: uppercase;
-    font-family: Faunces;
-    font-weight: 900;
-    letter-spacing: 0.2em;
-  }
-  main .header__arrow {
-    margin: auto;
-    height: 20%;
-    width: auto;
-  }
-  main .egg {
-    background-image: url("assets/photos/image-transform.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-  }
+main {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-family: Fraunces;
+}
+main img {
+  width: 100%;
+  height: 312px;
+  top: 32px;
+  left: 24px;
+}
+main .header {
+  overflow: hidden;
+  background-image: url("assets/photos/image-header.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main .header__top {
+  padding: 3vh;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .header__top img {
+  width: 30px;
+  height: 20px;
+}
+main .header p {
+  color: white;
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+main .header h1 {
+  margin: 40px 0 0 0;
+  text-align: center;
+  padding: 0;
+  color: white;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-family: Faunces;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+main .header__arrow {
+  margin: auto;
+  height: 20%;
+  width: auto;
+}
+main .container {
+  display: flex;
+  flex-direction: column;
+}
+main .container__img {
+  width: 100%;
+}
+main .container__text {
+  margin: 5vh;
+}
+main .container__text h2 {
+  font-family: Fraunces;
+  font-weight: bolder;
+  font-size: 32px;
+}
+main .container__text p {
+  margin: 10vh 0;
+  opacity: 0.6;
+  line-height: 1.5em;
+  font-family: Barlow;
+  font-weight: 600;
+}
+main .container__text a {
+  color: black;
+  text-transform: uppercase;
+  font-family: Fraunces;
+  font-weight: 900;
+  text-decoration: none;
+}
+main .container__text a a::before {
+  content: "Test";
+  position: absolute;
+  background: rgb(250, 212, 0);
+}
+main .containerfruit {
+  display: flex;
+  flex-direction: column;
+  color: rgb(36, 85, 74);
+  font-family: Barlow;
+  font-weight: 600;
+}
+main .containerfruit h2 {
+  font-family: Fraunces;
+  font-weight: 900;
+}
+main .containerfruit--cerise {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20% 10%;
+  height: 75vh;
+  background-image: url("assets/photos/image-graphic-design.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .containerfruit--orange {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20% 10%;
+  height: 75vh;
+  background-image: url("assets/photos/image-photography.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 5% 10%;
+}
+main .testimonials h2 {
+  opacity: 0.6;
+  font-family: Fraunces;
+  font-weight: 900;
+}
+main .testimonials p {
+  font-family: Barlow;
+  font-weight: 600;
+}
+main .testimonials img {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
 }/*# sourceMappingURL=style.css.map */
