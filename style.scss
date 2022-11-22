@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+@font-face {
+    font-family: Fraunces;
+    src: url("Fraunces_9pt_Soft/Fraunces_9pt_Soft-Regular.ttf");
+  }
+
+@media screen and (max-width: 480px){
+    
+    main{
+        text-align: center;
+        width: 100%;
+        font-size: 18px;
+        font-family: Fraunces;
+        display: flex;
+        flex-direction: column;
+        .header{
+            overflow: hidden;
+            background-image: url("assets/photos/image-header.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            &__top{
+                padding: 3vh;
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            p{
+                color: white;
+                font-weight: bolder;
+                font-size: 1.2em;
+            }
+            h1{
+                margin: 40px 0 0 0;
+                text-align: center;
+                padding: 0;
+                color: white;
+                font-size: 2.5em;
+                text-transform: uppercase;
+                font-family: Faunces;
+                font-weight: 900;
+                letter-spacing: 0.2em;
+            }
+            &__arrow{
+                margin: auto;
+                height: 20%;
+                width: auto;
+            }
+        } 
+       .egg{
+            background-image: url("assets/photos/image-transform.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+        }
+        .Transform{
+            h2{
+
+            }
+        }
+    }
+}
