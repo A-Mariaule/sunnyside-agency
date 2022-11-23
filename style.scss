@@ -3,16 +3,14 @@ body{
     margin: 0 auto;
 
 }
-
-
-
+/*Polices*/
 @font-face {
     font-family: Fraunces;
     src: url("Fraunces_9pt_Soft/Fraunces_9pt_Soft-Regular.ttf");
     font-family:Barlow;
     src: url("Barlow/Barlow-Regular.ttf")
   }
-    
+   
     main{
         text-align: center;
         width: 100%;
@@ -22,6 +20,7 @@ body{
         img{
             width: 100%;
         }
+        /*Première partie*/
         .header{
             overflow: hidden;
             background-image: url("assets/photos/image-header.jpg");
@@ -101,6 +100,13 @@ body{
                         color: white;
                         font-size: 3vh;
                     }
+                    .contact {
+                        background-color: white;
+                        border-radius: 28px;
+                        & a{
+                            color: black;
+                        }
+                    }
                     li:hover {
                         background-color:  rgba(255, 255, 255, 0.25);
                         border-radius:28px;
@@ -109,7 +115,7 @@ body{
                 }
             } 
         }
-
+        /*photos+text*/
         .container{
             @media screen and (min-width:1024px){
                 display:flex;
@@ -233,6 +239,7 @@ body{
             }                  
             }
         }
+        /*backgroundfruit+texte*/
         .containerfruit{
             @media screen and (min-width:1024px){
                 display:flex;
@@ -281,6 +288,7 @@ body{
                 p{grid-area: 3 / 1 / 4 / 2; }
             }
         }
+        /*commentaires clients*/
         .testimonials{
             @media screen and (min-width:1024px){               
                 .center{
@@ -289,16 +297,13 @@ body{
                     align-items: center;
                     justify-content: space-evenly;
                     div{
-                        width: 33%;
+                        height: 20%;
+                        width: auto;
                     }
                 }
             }
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
             padding: 5%;
-            margin: 5%;
+            margin: 3%;
             h2{
                 opacity: 0.6;
                 font-family: Fraunces;
@@ -309,7 +314,6 @@ body{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: space-between;
 
                 p{
                     font-family: Barlow;
@@ -340,6 +344,7 @@ body{
                 }
             }
         }
+        /*4 images (et un mot)*/
         .containerimages{
             @media screen and (min-width:1024px){
                 flex-direction: row;
@@ -357,6 +362,7 @@ body{
                 }
             }
         }
+        /*navigation bas de site*/
         .footer{
             height: 60vh;
             margin: 0;
@@ -395,15 +401,15 @@ body{
             &__logo{
                 justify-content: center;
                 li{
-                    padding-right: 3vh;
+                    padding-right: 5vh;
                 }
                 li img{
                     width: 5vh;
                     height: 5vh;
                 }
                 li .insta{
-                    width: 100%;
-                    height: 100%;
+                    width: 7vh;
+                    height: 7vh;
                 }
             }
         }

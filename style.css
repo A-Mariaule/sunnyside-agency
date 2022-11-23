@@ -1,8 +1,10 @@
+@charset "UTF-8";
 body {
   text-align: center;
   margin: 0 auto;
 }
 
+/*Polices*/
 @font-face {
   font-family: Fraunces;
   src: url("Fraunces_9pt_Soft/Fraunces_9pt_Soft-Regular.ttf");
@@ -15,6 +17,12 @@ main {
   height: 100%;
   font-size: 18px;
   font-family: Fraunces;
+  /*Première partie*/
+  /*photos+text*/
+  /*backgroundfruit+texte*/
+  /*commentaires clients*/
+  /*4 images (et un mot)*/
+  /*navigation bas de site*/
 }
 main img {
   width: 100%;
@@ -96,6 +104,13 @@ main .header__arrow {
     text-decoration: none;
     color: white;
     font-size: 3vh;
+  }
+  main .header ul .contact {
+    background-color: white;
+    border-radius: 28px;
+  }
+  main .header ul .contact a {
+    color: black;
   }
   main .header ul li:hover {
     background-color: rgba(255, 255, 255, 0.25);
@@ -280,12 +295,8 @@ main .containerfruit--orange p {
   grid-area: 3/1/4/2;
 }
 main .testimonials {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
   padding: 5%;
-  margin: 5%;
+  margin: 3%;
 }
 @media screen and (min-width: 1024px) {
   main .testimonials .center {
@@ -295,7 +306,8 @@ main .testimonials {
     justify-content: space-evenly;
   }
   main .testimonials .center div {
-    width: 33%;
+    height: 20%;
+    width: auto;
   }
 }
 main .testimonials h2 {
@@ -308,7 +320,6 @@ main .testimonials__clients {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 main .testimonials__clients p {
   font-family: Barlow;
@@ -390,13 +401,13 @@ main .footer__logo {
   justify-content: center;
 }
 main .footer__logo li {
-  padding-right: 3vh;
+  padding-right: 5vh;
 }
 main .footer__logo li img {
   width: 5vh;
   height: 5vh;
 }
 main .footer__logo li .insta {
-  width: 100%;
-  height: 100%;
+  width: 7vh;
+  height: 7vh;
 }/*# sourceMappingURL=style.css.map */
