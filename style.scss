@@ -22,9 +22,6 @@ body{
         font-family: Fraunces;
         img{
             width: 100%;
-                height: 312px;
-                top: 32px;
-                left: 24px;
         }
         .header{
             overflow: hidden;
@@ -41,9 +38,13 @@ body{
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                img{
+                &--menu{
                     width: 30px;
                     height: 20px;
+                }
+                &--sunnyside{
+                    width: 100px;
+                    height: 40px;
                 }
             }
             p{
@@ -68,23 +69,48 @@ body{
                 width: auto;
             }
         } 
+
         .container{
+            @media screen and (min-width:1024px){
+                display:flex;
+                flex-direction: row;
+                text-align: center;
+                div{
+                    width: 50%;
+                    display: flex;
+                }
+            }
             display: flex;
             flex-direction: column;
+            width: 100%;
             &__img{
-                width: 100%;
+                width: 100%; 
+                height: 100%;               
+                margin: 0;
+                padding: 0;
+                img{
+                    height: 100%;
+                }            
             }
         
             &__text{
-            margin: 5vh;
-                h2{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: 100%;
+                height: 60vh;        
+               h2{
+                    margin: auto;
+                    width: 90%;
                     font-family: Fraunces ;
                     font-weight: bolder;
                     font-size: 32px;
                 }
 
                 p{
-                    margin: 10vh 0;
+                    width: 90%;
+                    height: auto;
+                    margin: auto;
                     opacity: 0.6;
                     line-height: 1.5em;
                     font-family: Barlow;
@@ -92,20 +118,17 @@ body{
                 }
 
                 a{
+                    margin-bottom: 20px;
                     color: black;
                     text-transform: uppercase;
                     font-family: Fraunces;
                     font-weight: 900;
                     text-decoration: none;
-                    a::before{
-                        content:"Test";
-                        position: absolute;
-                        background:rgba(250, 212, 0, 1);
-                    }
                 }
             }
         }
         .containerfruit{
+            margin: 0;
             display: flex;
             flex-direction: column;
             color:rgba(36, 85, 74, 1);
@@ -159,8 +182,8 @@ body{
 
             img{
                 border-radius: 50%;
-                height: 75px;
-                width: 75px;
+                height: 100px;
+                width: 100px;
                 margin-top: 50px;
             }
 
@@ -196,10 +219,10 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            h2{
-                font-weight: 900;
-                color:rgba(44, 117, 102, 1);
-                font-size: 2.5em;
+            &__titre{
+                align-self: center;
+                width: 30%;
+                color: rgba(44, 117, 102, 1);
             }
             ul{
                 list-style-type: none;
