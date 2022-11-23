@@ -12,8 +12,6 @@ body{
     font-family:Barlow;
     src: url("Barlow/Barlow-Regular.ttf")
   }
-
-
     
     main{
         text-align: center;
@@ -171,8 +169,68 @@ body{
                     font-family: Fraunces;
                     font-weight: 900;
                     text-decoration: none;
-                    font-size: 3vh;
+                    font-size: 3vh; 
                 }
+                .container__text--jaune:after {                  
+                    display: block;
+                    content: "";
+                    width:130px;
+                    height:1.5vh;
+                    background: #FAD400;
+                    mix-blend-mode: normal;
+                    opacity: 0.3;
+                    border-radius: 1.75rem;
+                    margin: auto;
+                    }
+                    .container__text--jaune:hover:after{
+                       opacity: 0.8;
+                    }
+                
+                .container__text--rouge:after{
+                    display: block;
+                    content: "";
+                    width:130px;
+                    height:1.5vh;
+                    background:rgba(254, 119, 102, 1);
+                    mix-blend-mode: normal;
+                    opacity: 0.3;
+                    border-radius: 1.75rem;
+                    margin: auto;
+                }
+                .container__text--rouge:hover:after{
+                    opacity: 0.8;
+                }
+                @media  screen and (min-width: 1024px){               
+                .container__text--jaune:after {                  
+                    display: block;
+                    content: "";
+                    width:12vw;
+                    height:1.5vh;
+                    background: #FAD400;
+                    mix-blend-mode: normal;
+                    opacity: 0.3;
+                    border-radius: 1.75rem;
+                    margin: auto;
+                    }
+                    .container__text--jaune:hover:after{
+                       opacity: 0.8;
+                    }
+                
+                .container__text--rouge:after{
+                    display: block;
+                    content: "";
+                    width:12vw;
+                    height:1.5vh;
+                    background:rgba(254, 119, 102, 1);
+                    mix-blend-mode: normal;
+                    opacity: 0.3;
+                    border-radius: 1.75rem;
+                    margin: auto;
+                }
+                .container__text--rouge:hover:after{
+                    opacity: 0.8;
+                }
+            }                  
             }
         }
         .containerfruit{
@@ -197,26 +255,30 @@ body{
                 font-size: 5vh;
             }
             &--cerise{
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
                 padding: 5%;
                 height: 80vh;
                 background-image: url("assets/photos/image-graphic-design.jpg");
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                h2{grid-area: 2 / 1 / 3 / 2; }
+                p{grid-area: 3 / 1 / 4 / 2; }
             }
             &--orange{
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
                 padding: 5%;
                 height: 80vh;
                 background-image: url("assets/photos/image-photography.jpg");
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                h2{grid-area: 2 / 1 / 3 / 2; }
+                p{grid-area: 3 / 1 / 4 / 2; }
             }
         }
         .testimonials{
@@ -234,6 +296,7 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
+            align-items: center;
             padding: 5%;
             margin: 5%;
             h2{
@@ -241,34 +304,40 @@ body{
                 font-family: Fraunces;
                 font-weight: 900;
                 font-size: 5vh;
-
             }
+            &__clients{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
 
-            p{
-                font-family: Barlow;
-                font-weight: 600;
-                line-height: 1.6em;
-                margin: auto;
-                font-size: 3vh;
-            }
+                p{
+                    font-family: Barlow;
+                    font-weight: 600;
+                    line-height: 1.6em;
+                    margin: auto;
+                    font-size: 3vh;
+                }
 
-            img{
-                border-radius: 50%;
-                height: 10vh;
-                width: 10vh;
-                margin-top: 10px;
-            }
+                img{
+                    border-radius: 50%;
+                    height: 10vh;
+                    width: 10vh;
+                    margin-top: 10px;
+                }
 
-            h3{
-                font-family: Fraunces;
-                font-weight: 900;
-                font-size: 1.3em;
-                margin:0;
-            }
+                h3{
+                    font-family: Fraunces;
+                    font-weight: 900;
+                    font-size: 3vh;
+                    margin:0;
+                }
 
-            .fonction{
+                .fonction{
                 color: #A7AAAD;
                 margin-top: 0;
+                font-size: 2vh;
+                }
             }
         }
         .containerimages{
@@ -326,7 +395,7 @@ body{
             &__logo{
                 justify-content: center;
                 li{
-                    padding-right: 30px;
+                    padding-right: 3vh;
                 }
                 li img{
                     width: 5vh;
