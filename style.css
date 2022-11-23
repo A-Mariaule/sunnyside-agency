@@ -31,7 +31,7 @@ main .header {
 }
 main .header__top {
   padding: 3vh;
-  height: 5%;
+  height: 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,21 +40,14 @@ main .header__top--menu {
   width: 30px;
   height: 20px;
 }
-main .header__top--sunnyside {
-  width: 100px;
-  height: 40px;
-}
-main .header p {
-  color: white;
-  font-weight: bolder;
-  font-size: 1.2em;
+main .header__top--deroulant {
+  display: none;
 }
 main .header h1 {
-  margin: 40px 0 0 0;
+  margin: 40px auto;
   text-align: center;
   padding: 0;
   color: white;
-  font-size: 2.5em;
   text-transform: uppercase;
   font-family: Faunces;
   font-weight: 900;
@@ -64,6 +57,50 @@ main .header__arrow {
   margin: auto;
   height: 20%;
   width: auto;
+}
+@media screen and (max-width: 1024px) {
+  main .header h1 {
+    font-size: 5vh;
+  }
+  main .header .header__top--sunnyside {
+    width: 100px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .header h1 {
+    font-size: 10vh;
+  }
+  main .header .header__top--menu {
+    display: none;
+  }
+  main .header .header__top--sunnyside {
+    height: 6vh;
+    width: 15vh;
+    margin-left: 10px;
+  }
+  main .header ul {
+    width: 30vw;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+  }
+  main .header ul li {
+    width: 20%;
+    border-radius: 28px;
+    margin-right: 2vw;
+    mix-blend-mode: normal;
+  }
+  main .header ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 3vh;
+  }
+  main .header ul li:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 28px;
+  }
 }
 main .container {
   display: flex;
@@ -77,8 +114,11 @@ main .container {
     text-align: center;
   }
   main .container div {
-    width: 50%;
     display: flex;
+  }
+  main .container--oeuf {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 main .container__img {
@@ -102,7 +142,7 @@ main .container__text h2 {
   width: 90%;
   font-family: Fraunces;
   font-weight: bolder;
-  font-size: 32px;
+  font-size: 5vh;
 }
 main .container__text p {
   width: 90%;
@@ -112,6 +152,7 @@ main .container__text p {
   line-height: 1.5em;
   font-family: Barlow;
   font-weight: 600;
+  font-size: 3vh;
 }
 main .container__text a {
   margin-bottom: 20px;
@@ -120,6 +161,7 @@ main .container__text a {
   font-family: Fraunces;
   font-weight: 900;
   text-decoration: none;
+  font-size: 3vh;
 }
 main .containerfruit {
   margin: 0;
@@ -128,17 +170,29 @@ main .containerfruit {
   color: rgb(36, 85, 74);
   font-family: Barlow;
   font-weight: 600;
+  font-size: 3vh;
+  line-height: 2em;
+}
+@media screen and (min-width: 1024px) {
+  main .containerfruit {
+    display: flex;
+    flex-direction: row;
+  }
+  main .containerfruit div {
+    width: 50%;
+  }
 }
 main .containerfruit h2 {
   font-family: Fraunces;
   font-weight: 900;
+  font-size: 5vh;
 }
 main .containerfruit--cerise {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 20% 10%;
-  height: 75vh;
+  padding: 5%;
+  height: 80vh;
   background-image: url("assets/photos/image-graphic-design.jpg");
   background-position: center;
   background-size: cover;
@@ -148,8 +202,8 @@ main .containerfruit--orange {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 20% 10%;
-  height: 75vh;
+  padding: 5%;
+  height: 80vh;
   background-image: url("assets/photos/image-photography.jpg");
   background-position: center;
   background-size: cover;
@@ -159,25 +213,38 @@ main .testimonials {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 5% 10%;
+  padding: 5%;
+  margin: 5%;
+}
+@media screen and (min-width: 1024px) {
+  main .testimonials .center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  main .testimonials .center div {
+    width: 33%;
+  }
 }
 main .testimonials h2 {
   opacity: 0.6;
   font-family: Fraunces;
   font-weight: 900;
-  margin: 10%;
+  font-size: 5vh;
 }
 main .testimonials p {
   font-family: Barlow;
   font-weight: 600;
   line-height: 1.6em;
-  margin: 10% auto;
+  margin: auto;
+  font-size: 3vh;
 }
 main .testimonials img {
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  margin-top: 50px;
+  height: 10vh;
+  width: 10vh;
+  margin-top: 10px;
 }
 main .testimonials h3 {
   font-family: Fraunces;
@@ -193,6 +260,12 @@ main .containerimages {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+}
+@media screen and (min-width: 1024px) {
+  main .containerimages {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 }
 main .containerimages--block {
   margin: 0;
@@ -225,6 +298,15 @@ main .footer__menu {
 main .footer__menu li {
   color: rgb(69, 141, 126);
   font-weight: 600;
+  font-size: 3vh;
+  text-decoration: none;
+}
+main .footer__menu a {
+  text-decoration: none;
+  color: rgb(69, 141, 126);
+}
+main .footer__menu a:hover {
+  color: white;
 }
 main .footer__logo {
   justify-content: center;
@@ -233,10 +315,10 @@ main .footer__logo li {
   padding-right: 30px;
 }
 main .footer__logo li img {
-  width: 20px;
-  height: 20px;
+  width: 5vh;
+  height: 5vh;
 }
 main .footer__logo li .insta {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */

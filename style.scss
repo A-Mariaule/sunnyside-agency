@@ -13,6 +13,7 @@ body{
     src: url("Barlow/Barlow-Regular.ttf")
   }
 
+
     
     main{
         text-align: center;
@@ -34,7 +35,7 @@ body{
             flex-direction: column;
             &__top{
                 padding: 3vh;
-                height: 5%;
+                height: 10%;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -42,33 +43,74 @@ body{
                     width: 30px;
                     height: 20px;
                 }
-                &--sunnyside{
-                    width: 100px;
-                    height: 40px;
+                &--deroulant{
+                    display: none;
                 }
             }
-            p{
-                color: white;
-                font-weight: bolder;
-                font-size: 1.2em;
-            }
             h1{
-                margin: 40px 0 0 0;
+                margin: 40px auto;
                 text-align: center;
                 padding: 0;
                 color: white;
-                font-size: 2.5em;
                 text-transform: uppercase;
                 font-family: Faunces;
                 font-weight: 900;
-                letter-spacing: 0.2em;
-            }
+                letter-spacing: 0.2em;                   
+                }
             &__arrow{
                 margin: auto;
                 height: 20%;
                 width: auto;
             }
-        } 
+            @media screen and (max-width:1024px){
+                h1{
+                    font-size: 5vh;
+                }
+                .header__top--sunnyside{
+                    width: 100px;
+                    height: 40px;
+                }
+            }
+            @media screen and (min-width :1024px){
+                h1{
+            
+                    font-size: 10vh;
+            
+                }
+                .header__top--menu{
+                    display: none;
+                }
+            
+                .header__top--sunnyside{
+                    height: 6vh;
+                    width: 15vh;
+                    margin-left: 10px;
+                }
+                ul{
+                    width: 30vw;
+                    height: 6vh;
+                    display: flex;
+                    align-items: center;
+                    list-style-type:none;
+                    li{
+                        width: 20%;
+                        border-radius: 28px;
+                        margin-right: 2vw;
+                        mix-blend-mode: normal;
+                    }              
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-size: 3vh;
+                    }
+                    li:hover {
+                        background-color:  rgba(255, 255, 255, 0.25);
+                        border-radius:28px;
+
+                    }
+                }
+            } 
+        }
 
         .container{
             @media screen and (min-width:1024px){
@@ -76,9 +118,13 @@ body{
                 flex-direction: row;
                 text-align: center;
                 div{
-                    width: 50%;
                     display: flex;
                 }
+                &--oeuf{
+                    display: flex;
+                    flex-direction: row-reverse;
+                }
+
             }
             display: flex;
             flex-direction: column;
@@ -104,7 +150,7 @@ body{
                     width: 90%;
                     font-family: Fraunces ;
                     font-weight: bolder;
-                    font-size: 32px;
+                    font-size: 5vh;
                 }
 
                 p{
@@ -115,6 +161,7 @@ body{
                     line-height: 1.5em;
                     font-family: Barlow;
                     font-weight: 600;
+                    font-size: 3vh;
                 }
 
                 a{
@@ -124,26 +171,37 @@ body{
                     font-family: Fraunces;
                     font-weight: 900;
                     text-decoration: none;
+                    font-size: 3vh;
                 }
             }
         }
         .containerfruit{
+            @media screen and (min-width:1024px){
+                display:flex;
+                flex-direction:row;
+                div{
+                    width:50%;
+                }
+            }
             margin: 0;
             display: flex;
             flex-direction: column;
             color:rgba(36, 85, 74, 1);
             font-family: Barlow;
             font-weight: 600;
+            font-size: 3vh;
+            line-height: 2em;
             h2{
                 font-family: Fraunces;
                 font-weight: 900;
-            }                
+                font-size: 5vh;
+            }
             &--cerise{
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                padding:  20% 10%;
-                height: 75vh;
+                padding: 5%;
+                height: 80vh;
                 background-image: url("assets/photos/image-graphic-design.jpg");
                 background-position: center;
                 background-size: cover;
@@ -153,8 +211,8 @@ body{
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
-                padding:  20% 10%;
-                height: 75vh;
+                padding: 5%;
+                height: 80vh;
                 background-image: url("assets/photos/image-photography.jpg");
                 background-position: center;
                 background-size: cover;
@@ -162,29 +220,43 @@ body{
             }
         }
         .testimonials{
+            @media screen and (min-width:1024px){               
+                .center{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    div{
+                        width: 33%;
+                    }
+                }
+            }
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
-            padding: 5% 10%;
+            padding: 5%;
+            margin: 5%;
             h2{
                 opacity: 0.6;
                 font-family: Fraunces;
                 font-weight: 900;
-                margin: 10%;
+                font-size: 5vh;
+
             }
 
             p{
                 font-family: Barlow;
                 font-weight: 600;
                 line-height: 1.6em;
-                margin: 10% auto;
+                margin: auto;
+                font-size: 3vh;
             }
 
             img{
                 border-radius: 50%;
-                height: 100px;
-                width: 100px;
-                margin-top: 50px;
+                height: 10vh;
+                width: 10vh;
+                margin-top: 10px;
             }
 
             h3{
@@ -200,6 +272,10 @@ body{
             }
         }
         .containerimages{
+            @media screen and (min-width:1024px){
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
             display: flex;
             flex-wrap: wrap;
             margin: 0;
@@ -233,7 +309,19 @@ body{
                 li{
                     color:rgba(69, 141, 126, 1);
                     font-weight: 600;
+                    font-size: 3vh;
+                    text-decoration: none;
                 }
+
+                a{
+                    text-decoration: none;
+                    color:rgba(69, 141, 126, 1); ;
+                }
+
+                a:hover{
+                    color: white;
+                }
+
             }
             &__logo{
                 justify-content: center;
@@ -241,12 +329,12 @@ body{
                     padding-right: 30px;
                 }
                 li img{
-                    width: 20px;
-                    height: 20px;
+                    width: 5vh;
+                    height: 5vh;
                 }
                 li .insta{
-                    width: 90%;
-                    height: 90%;
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
