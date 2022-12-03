@@ -1,22 +1,22 @@
-body{
-    text-align: center;
-    margin: 0 auto;
-
-}
-/*Polices*/
+/*Polices*/  
 @font-face {
     font-family: Fraunces;
     src: url("Fraunces_9pt_Soft/Fraunces_9pt_Soft-Regular.ttf");
+  }
+@font-face{
     font-family:Barlow;
     src: url("Barlow/Barlow-Regular.ttf")
-  }
-   
+}
+
+body{
+    text-align: center;
+    margin: 0 auto;
     main{
         text-align: center;
         width: 100%;
         height: 100%;
         font-size: 18px;
-        font-family: Fraunces;
+        font-family: Barlow, sans-serif;
         img{
             width: 100%;
         }
@@ -79,12 +79,12 @@ body{
                 }
             
                 .header__top--sunnyside{
-                    height: 6vh;
-                    width: 15vh;
+                    height: 8vh;
+                    width: 20vh;
                     margin-left: 10px;
                 }
                 ul{
-                    width: 30vw;
+                    width: 50vw;
                     height: 6vh;
                     display: flex;
                     align-items: center;
@@ -94,22 +94,27 @@ body{
                         border-radius: 28px;
                         margin-right: 2vw;
                         mix-blend-mode: normal;
+                        padding: 0.8vw;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            font-size: 3vh;
+                        }
+                        &:hover{
+                            background-color:  rgba(255, 255, 255, 0.25);
+                            border-radius:28px;
+                        }
                     }              
-                    a{
-                        text-decoration: none;
-                        color: white;
-                        font-size: 3vh;
-                    }
                     .contact {
                         background-color: white;
                         border-radius: 28px;
+                        font-family: Fraunces,sans-serif;
                         & a{
                             color: black;
+                            &:hover{
+                                color: white;
+                            }
                         }
-                    }
-                    li:hover {
-                        background-color:  rgba(255, 255, 255, 0.25);
-                        border-radius:28px;
 
                     }
                 }
@@ -130,6 +135,13 @@ body{
                 }
 
             }
+            //cas où le ratio width/height déforme l'image
+            @media screen and (min-width:1024px) and (max-width:1224px){
+                img{
+                    height: 60vh;
+                }
+            }
+
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -137,10 +149,7 @@ body{
                 width: 100%; 
                 height: 100%;               
                 margin: 0;
-                padding: 0;
-                img{
-                    height: 100%;
-                }            
+                padding: 0;     
             }
         
             &__text{
@@ -424,6 +433,9 @@ body{
                 justify-content: center;
                 li{
                     padding-right: 5vh;
+                    &:hover{
+                        filter: brightness(0) invert(1);
+                    }
                 }
                 li img{
                     width: 5vh;
@@ -436,3 +448,4 @@ body{
             }
         }
     }
+}

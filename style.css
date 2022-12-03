@@ -1,22 +1,23 @@
 @charset "UTF-8";
-body {
-  text-align: center;
-  margin: 0 auto;
-}
-
 /*Polices*/
 @font-face {
   font-family: Fraunces;
   src: url("Fraunces_9pt_Soft/Fraunces_9pt_Soft-Regular.ttf");
+}
+@font-face {
   font-family: Barlow;
   src: url("Barlow/Barlow-Regular.ttf");
 }
-main {
+body {
+  text-align: center;
+  margin: 0 auto;
+}
+body main {
   text-align: center;
   width: 100%;
   height: 100%;
   font-size: 18px;
-  font-family: Fraunces;
+  font-family: Barlow, sans-serif;
   /*Première partie*/
   /*photos+text*/
   /*backgroundfruit+texte*/
@@ -24,10 +25,10 @@ main {
   /*4 images (et un mot)*/
   /*navigation bas de site*/
 }
-main img {
+body main img {
   width: 100%;
 }
-main .header {
+body main .header {
   overflow: hidden;
   background-image: url("assets/photos/image-header.jpg");
   background-size: cover;
@@ -37,21 +38,21 @@ main .header {
   display: flex;
   flex-direction: column;
 }
-main .header__top {
+body main .header__top {
   padding: 3vh;
   height: 10%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-main .header__top--menu {
+body main .header__top--menu {
   width: 30px;
   height: 20px;
 }
-main .header__top--deroulant {
+body main .header__top--deroulant {
   display: none;
 }
-main .header h1 {
+body main .header h1 {
   margin: 40px auto;
   text-align: center;
   padding: 0;
@@ -61,105 +62,112 @@ main .header h1 {
   font-weight: 900;
   letter-spacing: 0.2em;
 }
-main .header__arrow {
+body main .header__arrow {
   margin: auto;
   height: 20%;
   width: auto;
 }
 @media screen and (max-width: 1024px) {
-  main .header h1 {
+  body main .header h1 {
     font-size: 5vh;
   }
-  main .header .header__top--sunnyside {
+  body main .header .header__top--sunnyside {
     width: 100px;
     height: 40px;
   }
 }
 @media screen and (min-width: 1024px) {
-  main .header h1 {
+  body main .header h1 {
     font-size: 10vh;
   }
-  main .header .header__top--menu {
+  body main .header .header__top--menu {
     display: none;
   }
-  main .header .header__top--sunnyside {
-    height: 6vh;
-    width: 15vh;
+  body main .header .header__top--sunnyside {
+    height: 8vh;
+    width: 20vh;
     margin-left: 10px;
   }
-  main .header ul {
-    width: 30vw;
+  body main .header ul {
+    width: 50vw;
     height: 6vh;
     display: flex;
     align-items: center;
     list-style-type: none;
   }
-  main .header ul li {
+  body main .header ul li {
     width: 20%;
     border-radius: 28px;
     margin-right: 2vw;
     mix-blend-mode: normal;
+    padding: 0.8vw;
   }
-  main .header ul a {
+  body main .header ul li a {
     text-decoration: none;
     color: white;
     font-size: 3vh;
   }
-  main .header ul .contact {
-    background-color: white;
-    border-radius: 28px;
-  }
-  main .header ul .contact a {
-    color: black;
-  }
-  main .header ul li:hover {
+  body main .header ul li:hover {
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 28px;
   }
+  body main .header ul .contact {
+    background-color: white;
+    border-radius: 28px;
+    font-family: Fraunces, sans-serif;
+  }
+  body main .header ul .contact a {
+    color: black;
+  }
+  body main .header ul .contact a:hover {
+    color: white;
+  }
 }
-main .container {
+body main .container {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  main .container {
+  body main .container {
     display: flex;
     flex-direction: row;
     text-align: center;
   }
-  main .container div {
+  body main .container div {
     display: flex;
   }
-  main .container--oeuf {
+  body main .container--oeuf {
     display: flex;
     flex-direction: row-reverse;
   }
 }
-main .container__img {
+@media screen and (min-width: 1024px) and (max-width: 1224px) {
+  body main .container img {
+    height: 60vh;
+  }
+}
+body main .container__img {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
-main .container__img img {
-  height: 100%;
-}
-main .container__text {
+body main .container__text {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 100%;
   height: 60vh;
 }
-main .container__text h2 {
+body main .container__text h2 {
   margin: auto;
   width: 90%;
   font-family: Fraunces, sans-serif;
   font-weight: bolder;
   font-size: 5vh;
 }
-main .container__text p {
+body main .container__text p {
   width: 90%;
   height: auto;
   margin: auto;
@@ -169,7 +177,7 @@ main .container__text p {
   font-weight: 600;
   font-size: 3vh;
 }
-main .container__text a {
+body main .container__text a {
   margin-bottom: 20px;
   color: black;
   text-transform: uppercase;
@@ -178,7 +186,7 @@ main .container__text a {
   text-decoration: none;
   font-size: 3vh;
 }
-main .container__text .container__text--jaune:after {
+body main .container__text .container__text--jaune:after {
   display: block;
   content: "";
   width: 130px;
@@ -189,10 +197,10 @@ main .container__text .container__text--jaune:after {
   border-radius: 1.75rem;
   margin: auto;
 }
-main .container__text .container__text--jaune:hover:after {
+body main .container__text .container__text--jaune:hover:after {
   opacity: 0.8;
 }
-main .container__text .container__text--rouge:after {
+body main .container__text .container__text--rouge:after {
   display: block;
   content: "";
   width: 130px;
@@ -203,11 +211,11 @@ main .container__text .container__text--rouge:after {
   border-radius: 1.75rem;
   margin: auto;
 }
-main .container__text .container__text--rouge:hover:after {
+body main .container__text .container__text--rouge:hover:after {
   opacity: 0.8;
 }
 @media screen and (min-width: 1024px) {
-  main .container__text .container__text--jaune:after {
+  body main .container__text .container__text--jaune:after {
     display: block;
     content: "";
     width: 12vw;
@@ -218,10 +226,10 @@ main .container__text .container__text--rouge:hover:after {
     border-radius: 1.75rem;
     margin: auto;
   }
-  main .container__text .container__text--jaune:hover:after {
+  body main .container__text .container__text--jaune:hover:after {
     opacity: 0.8;
   }
-  main .container__text .container__text--rouge:after {
+  body main .container__text .container__text--rouge:after {
     display: block;
     content: "";
     width: 12vw;
@@ -232,11 +240,11 @@ main .container__text .container__text--rouge:hover:after {
     border-radius: 1.75rem;
     margin: auto;
   }
-  main .container__text .container__text--rouge:hover:after {
+  body main .container__text .container__text--rouge:hover:after {
     opacity: 0.8;
   }
 }
-main .containerfruit {
+body main .containerfruit {
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -247,20 +255,20 @@ main .containerfruit {
   line-height: 2em;
 }
 @media screen and (min-width: 1024px) {
-  main .containerfruit {
+  body main .containerfruit {
     display: flex;
     flex-direction: row;
   }
-  main .containerfruit div {
+  body main .containerfruit div {
     width: 50%;
   }
 }
-main .containerfruit h2 {
+body main .containerfruit h2 {
   font-family: Fraunces, sans-serif;
   font-weight: 900;
   font-size: 5vh;
 }
-main .containerfruit--cerise {
+body main .containerfruit--cerise {
   padding: 5%;
   height: 80vh;
   background-image: url("assets/photos/image-graphic-design.jpg");
@@ -271,13 +279,13 @@ main .containerfruit--cerise {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
 }
-main .containerfruit--cerise h2 {
+body main .containerfruit--cerise h2 {
   grid-area: 2/1/3/2;
 }
-main .containerfruit--cerise p {
+body main .containerfruit--cerise p {
   grid-area: 3/1/4/2;
 }
-main .containerfruit--orange {
+body main .containerfruit--orange {
   padding: 5%;
   height: 80vh;
   background-image: url("assets/photos/image-photography.jpg");
@@ -288,33 +296,33 @@ main .containerfruit--orange {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
 }
-main .containerfruit--orange h2 {
+body main .containerfruit--orange h2 {
   grid-area: 2/1/3/2;
 }
-main .containerfruit--orange p {
+body main .containerfruit--orange p {
   grid-area: 3/1/4/2;
 }
-main .testimonials {
+body main .testimonials {
   padding: 5%;
   margin: 3%;
 }
 @media screen and (min-width: 1024px) {
-  main .testimonials .center {
+  body main .testimonials .center {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
   }
-  main .testimonials .emily {
+  body main .testimonials .emily {
     grid-area: 1/1/2/2;
   }
-  main .testimonials .thomas {
+  body main .testimonials .thomas {
     grid-area: 1/2/2/3;
   }
-  main .testimonials .jennie {
+  body main .testimonials .jennie {
     grid-area: 1/3/2/4;
   }
 }
-main .testimonials h2 {
+body main .testimonials h2 {
   opacity: 0.6;
   font-family: Fraunces, sans-serif;
   text-transform: uppercase;
@@ -323,11 +331,11 @@ main .testimonials h2 {
   text-align: center;
 }
 @media screen and (min-width: 1024px) {
-  main .testimonials h2 {
+  body main .testimonials h2 {
     font-size: xx-large;
   }
 }
-main .testimonials__clients {
+body main .testimonials__clients {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -335,11 +343,11 @@ main .testimonials__clients {
   padding: auto;
 }
 @media screen and (min-width: 1024px) {
-  main .testimonials__clients {
+  body main .testimonials__clients {
     width: 25vw;
   }
 }
-main .testimonials__clients p {
+body main .testimonials__clients p {
   font-family: Barlow;
   font-weight: 600;
   line-height: 1.6em;
@@ -348,44 +356,44 @@ main .testimonials__clients p {
   text-align: center;
   height: 100%;
 }
-main .testimonials__clients img {
+body main .testimonials__clients img {
   margin-bottom: 3vh;
   border-radius: 50%;
   height: 10vh;
   width: 10vh;
   margin-top: 10px;
 }
-main .testimonials__clients h3 {
+body main .testimonials__clients h3 {
   font-family: Fraunces;
   font-weight: 900;
   font-size: 3vh;
   margin: 0;
 }
-main .testimonials__clients .fonction {
+body main .testimonials__clients .fonction {
   color: #A7AAAD;
   margin-top: 0;
   font-size: 2vh;
 }
-main .containerimages {
+body main .containerimages {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
 }
 @media screen and (min-width: 1024px) {
-  main .containerimages {
+  body main .containerimages {
     flex-direction: row;
     flex-wrap: nowrap;
   }
 }
-main .containerimages--block {
+body main .containerimages--block {
   margin: 0;
   padding: 0;
   width: 50%;
 }
-main .containerimages--block img {
+body main .containerimages--block img {
   height: 100%;
 }
-main .footer {
+body main .footer {
   height: 60vh;
   margin: 0;
   background-color: rgb(144, 212, 198);
@@ -393,43 +401,46 @@ main .footer {
   flex-direction: column;
   justify-content: space-around;
 }
-main .footer__titre {
+body main .footer__titre {
   align-self: center;
   width: 30%;
   color: rgb(44, 117, 102);
 }
-main .footer ul {
+body main .footer ul {
   list-style-type: none;
   display: flex;
 }
-main .footer__menu {
+body main .footer__menu {
   padding: 0;
   justify-content: space-around;
 }
-main .footer__menu li {
+body main .footer__menu li {
   color: rgb(69, 141, 126);
   font-weight: 600;
   font-size: 3vh;
   text-decoration: none;
 }
-main .footer__menu a {
+body main .footer__menu a {
   text-decoration: none;
   color: rgb(69, 141, 126);
 }
-main .footer__menu a:hover {
+body main .footer__menu a:hover {
   color: white;
 }
-main .footer__logo {
+body main .footer__logo {
   justify-content: center;
 }
-main .footer__logo li {
+body main .footer__logo li {
   padding-right: 5vh;
 }
-main .footer__logo li img {
+body main .footer__logo li:hover {
+  filter: brightness(0) invert(1);
+}
+body main .footer__logo li img {
   width: 5vh;
   height: 5vh;
 }
-main .footer__logo li .insta {
+body main .footer__logo li .insta {
   width: 7vh;
   height: 7vh;
 }/*# sourceMappingURL=style.css.map */
