@@ -49,6 +49,9 @@ body main .header__top--menu {
   width: 30px;
   height: 20px;
 }
+body main .header__top--menu:hover {
+  opacity: 0.5;
+}
 body main .header__top--deroulant {
   display: none;
 }

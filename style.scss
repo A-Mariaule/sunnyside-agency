@@ -39,6 +39,9 @@ body{
                 &--menu{
                     width: 30px;
                     height: 20px;
+                    &:hover{
+                        opacity: 0.5;
+                    }                
                 }
                 &--deroulant{
                     display: none;
@@ -67,6 +70,9 @@ body{
                     width: 100px;
                     height: 40px;
                 }
+                
+
+
             }
             @media screen and (min-width :1024px){
                 h1{
